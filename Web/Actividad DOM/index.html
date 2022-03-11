@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Eventos y DOM</h1>
+
+    <!-- Q1 -->
+    <div class="container">
+        <p>1. Modifica el siguiente elemento para mostrar la posición del mouse en el documento:</p>
+        <p id="mousePosition">Posición del mouse: </p>
+    </div>
+
+    <!-- Q2 -->
+    <div class="container">
+        <p>2. Al dar click al siguiente botón, obtén el nombre y apellido de las siguientes cajas de texto, y agrega, después del botón, un elemento que tenga el nombre completo.</p>
+        <form id="form1">
+            First name: <input type="text" name="fname" id="firstnameInput"><br>
+            Last name: <input type="text" name="lname" id="lastnameInput"><br><br>
+        <input type="button" value="Submit" onclick="getFormvalue()">
+        <p id="completenameDiv"></p>
+        </form>
+    </div>
+
+    <!-- Q3 -->
+    <div class="container">
+        <p>3. Agrega el código para agregar una fila, o una columna, a la siguiente tabla al dar click al botón correspondiente.</p>
+        <table id="sampleTable" border="1">
+            <tr>
+                <td>Row 1 column 1</td>
+                <td>Row 1 column 2</td>
+            </tr>
+            <tr>
+                <td>Row 2 column 1</td>
+                <td>Row 2 column 2</td>
+            </tr>
+        </table><br>
+        <input type="button" onclick="insertRow()" value="Insert row">
+        <input type="button" onclick="insertColumn()" value="Insert column">
+    </div>
+
+    <!-- Q4 -->
+    <div class="container">
+        <p>4. Incluye dos cajas de input, para solicitar al usuario la posición de la fila y columna de la siguiente tabla, y otra para solicitar un texto. Al apretar el botón, actualiza el contenido de esa tabla en la posición que solicitaste, con la cadena de texto que solicitaste.</p>
+        <table id="myTable" border="1">
+            <tr>
+                <td>Row1 cell1</td>
+                <td>Row1 cell2</td>
+                <td>Row1 cell3</td>
+            </tr>
+            <tr>
+                <td>Row2 cell1</td>
+                <td>Row2 cell2</td>
+                <td>Row2 cell3</td>
+            </tr>
+            <tr>
+                <td>Row3 cell1</td>
+                <td>Row3 cell2</td>
+                <td>Row3 cell3</td>
+            </tr>
+            </table><form><br>
+            Position (row,col): <input type="text" placeholder="0,2" id="cellPositionInput"> <br>
+            New Text: <input type="text" id="newTextInput"> <br><br>
+            <input type="button" onclick="changeContent()" value="Change content">
+    </div>
+
+    <!-- Q5 -->
+    <div class="container">
+        <p>5. Agrega el código para quitar o agregar elementos a la lista de opciones. Los colores pueden ser aleatorios.</p>
+        <form>
+            <select id="colorSelect">
+                <option>Red</option>
+                <option>Green</option>
+                <option>White</option>
+                <option>Black</option>
+            </select>
+            <input type="button" value="Add color" id="addColorBtn">
+            <input type="button" value="Remove color" id="removeColorBtn">
+        </form>
+    </div>
+
+    <!-- Q6 -->
+    <div class="container">
+        <p>6. Al poner el mouse encima de la siguiente imagen, genera dos números aleatorios entre 300 y 600 para el width y height de una imagen. Reemplaza la imagen de placeholder por otra similar con el tamaño random que generaste. El evento solo se dispara cuando pones el mouse en la imagen.</p>
+        <img src="http://placekitten.com/200/300" id="img">
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
