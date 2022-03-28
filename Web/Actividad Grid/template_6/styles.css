@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+  padding: 10px;
+  background-color: rgb(170, 170, 170);
+  grid-template-areas:
+    "sec1 sec1 sec2 sec3"
+    "sec4 sec5 sec6 ."
+    "sec7 sec7 sec8 sec9"
+    "sec7 sec7 sec10 ."
+    "sec11 sec11 sec11 sec12";
+}
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(65, 65, 65);
+  color: white;
+}
+.item:nth-child(1) {
+  grid-area: sec1;
+}
+.item:nth-child(2) {
+  grid-area: sec2;
+}
+.item:nth-child(3) {
+  grid-area: sec3;
+}
+.item:nth-child(4) {
+  grid-area: sec4;
+}
+.item:nth-child(5) {
+  grid-area: sec5;
+}
+.item:nth-child(6) {
+  grid-area: sec6;
+}
+.item:nth-child(7) {
+  grid-area: sec7;
+}
+.item:nth-child(8) {
+  grid-area: sec8;
+}
+.item:nth-child(9) {
+  grid-area: sec9;
+}
+.item:nth-child(10) {
+  grid-area: sec10;
+}
+.item:nth-child(11) {
+  grid-area: sec11;
+}
+.item:nth-child(12) {
+  grid-area: sec12;
+}
